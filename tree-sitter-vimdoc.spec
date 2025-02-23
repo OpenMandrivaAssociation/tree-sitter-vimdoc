@@ -37,9 +37,11 @@ Requires:   %{libname} = %{EVRD}
 Development files (Headers etc.) for %{name}
 
 # ───────────────────────────────────────────────────────────────────────────── #
-
 %prep
-%autosetup -C
+%setup -c
+
+mv tree-sitter-%{tslanguage}-%{version}/* .
+
 
 # ───────────────────────────────────────────────────────────────────────────── #
 
